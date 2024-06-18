@@ -2,6 +2,8 @@
 
 An analysis of a selection of RF signal data with a particular focus on signal quality and environmental factors.
 
+# DATA INVALID FOR DESIRED USE CASE - DO NOT USE
+
 #### Table of Contents
 
 - [RF Data Analysis](#rf-data-analysis) - [Table of Contents](#table-of-contents)
@@ -97,16 +99,25 @@ The dataset includes latitude and longitude information for each signal observat
 
 ## Data Cleaning/Transformation
 
-Provide details on how the data was cleaned and transformed for analysis. Mention any handling of missing values, outliers, and data normalization or scaling techniques applied.
+Dropped null columns and grouped by signal identifiers.
 
 ## Findings
 
-Summarize the key findings from your analysis. Highlight any interesting patterns, correlations, or insights gained from the data.
+The data shows that the signal quality is best when it is cloudy, second best when it is rainy, and worst when it is sunny:
+
+![dBm & weather plot](output.png)
+
+These findings are contrary to signal theory and the laws of physics.
+
+The data should have revealed a trend more in line with this figure:
+
+![Evaluation of SNR (dB) versus range with different weather conditions](https://www.researchgate.net/profile/Naresh-Kumar-123/publication/286766603/figure/fig5/AS:962127615500309@1606400507433/Evaluation-of-SNR-dB-versus-range-with-different-weather-conditions.gif)
+<sup>Naresh Kumar and A. Teixeira; Dec 2015</sup>
 
 ## Conclusion
 
-Summarize the overall conclusions drawn from the analysis. Discuss the implications of your findings and how they can be applied to improve RF signal processing and device performance.
+The selected data is not a viable option for answering the questions I have posed.
 
 ## Future Analysis
 
-Discuss potential areas for further analysis. Mention any additional data that could be collected or other methodologies that could be applied to gain deeper insights.
+No future analysis should be conducted on this dataset specifically.
