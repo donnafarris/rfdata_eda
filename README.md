@@ -1,14 +1,46 @@
-# rfdata_eda
+# RF Data Analysis
 
 An analysis of a selection of RF signal data with a particular focus on signal quality and environmental factors.
 
+#### Table of Contents
+
+- [RF Data Analysis](#rf-data-analysis) - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Questions](#questions)
+  - [The Data](#the-data)
+    - [Columns](#columns)
+      - [Categorical Fields:](#categorical-fields)
+      - [Quantitative Fields:](#quantitative-fields)
+  - [Potential Analysis Avenues](#potential-analysis-avenues)
+    - [Signal Classification:](#signal-classification)
+    - [Interference Detection:](#interference-detection)
+    - [Device Performance Optimization:](#device-performance-optimization)
+    - [Weather Condition Analysis:](#weather-condition-analysis)
+    - [Geolocation:](#geolocation)
+  - [Data Cleaning/Transformation](#data-cleaningtransformation)
+  - [Findings](#findings)
+  - [Conclusion](#conclusion)
+  - [Future Analysis](#future-analysis)
+
+## Introduction
+
+This project focuses on analyzing RF signal data collected via SDR hardware interfaced to DragonOS Focal over a period of one month (May 5, 2023, to June 11, 2023). The goal is to understand how various factors impact signal quality and to explore potential improvements in RF signal processing and device performance.
+
+## Questions
+
+1. How does the environment impact the signal quality? (i.e. weather, interference, location)
+2. How does device performance impact the signal quality?
+3. Are some modulations better for retaining signal quality in this environment and on this system?
+
 ## The Data
 
-[RF Signal Data](https://www.kaggle.com/datasets/suraj520/rf-signal-data): RF Signal data acquired via SDR H/W interfaced to DragonOS Focal.
+The dataset contains RF signal observations with various features describing the signal and its environment.
+
+Link: [RF Signal Data](https://www.kaggle.com/datasets/suraj520/rf-signal-data)
 
 ### Columns
 
-Categorical Fields:
+#### Categorical Fields:
 
 - Modulation: The modulation type used for the RF signal. Options: AM, FM, QAM, BPSK, QPSK, 8PSK.
 - Location: The location where the signal was observed (e.g., city and state/province).
@@ -19,7 +51,7 @@ Categorical Fields:
 - Power Source: Whether the device is plugged into a power source. Options: Yes, No.
 - Device Status: The current status of the device. Options: Streaming I/Q data, Transmitting beacon signal, Running game.
 
-Quantitative Fields:
+#### Quantitative Fields:
 
 - Timestamp: The date and time of the signal observation.
 - Frequency: The frequency of the RF signal in Hertz (Hz).
@@ -43,22 +75,38 @@ Quantitative Fields:
 
 ## Potential Analysis Avenues
 
-### Signal Classification:
+#### Signal Classification:
 
 The dataset can be used to classify RF signals based on their modulation type, frequency, bandwidth, and other features. This can help in identifying specific types of signals, such as voice or data transmissions, and can aid in tasks such as signal detection, interception, and decoding.
 
-### Interference Detection:
+#### Interference Detection:
 
 The dataset contains information about the type and level of interference present in the environment. This can be used to develop models for detecting and mitigating interference, which can improve the overall quality of the RF signal.
 
-### Device Performance Optimization:
+#### Device Performance Optimization:
 
 The dataset includes information about the type of RF device used to generate the signal, as well as its CPU usage, memory usage, and battery level. This can be used to develop models for optimizing the performance of RF devices, such as reducing power consumption or improving signal quality.
 
-### Weather Condition Analysis:
+#### Weather Condition Analysis:
 
 The dataset provides information about the weather conditions at the time of signal observation, including temperature, humidity, wind speed, precipitation, and weather condition. This can be used to analyze the impact of weather conditions on RF signal propagation and to develop predictive models for signal behavior under different weather conditions.
 
-### Geolocation:
+#### Geolocation:
 
 The dataset includes latitude and longitude information for each signal observation. This can be used to develop models for geolocation of RF signals, which can aid in tasks such as tracking and surveillance.
+
+## Data Cleaning/Transformation
+
+Provide details on how the data was cleaned and transformed for analysis. Mention any handling of missing values, outliers, and data normalization or scaling techniques applied.
+
+## Findings
+
+Summarize the key findings from your analysis. Highlight any interesting patterns, correlations, or insights gained from the data.
+
+## Conclusion
+
+Summarize the overall conclusions drawn from the analysis. Discuss the implications of your findings and how they can be applied to improve RF signal processing and device performance.
+
+## Future Analysis
+
+Discuss potential areas for further analysis. Mention any additional data that could be collected or other methodologies that could be applied to gain deeper insights.
